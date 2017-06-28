@@ -1,0 +1,3 @@
+on death of zombie pigman:
+  remove all gold nuggets from drops
+  remove all gold bars from drops
