@@ -1,0 +1,9 @@
+command /wiki <text>:
+  description: Quickly get the link to a page on the Minecraft wiki.
+  usage: /wiki <your search here>
+  permission: timgaming.skript.wiki
+  executable by: players
+  trigger:
+    set {_search} to argument
+    replace all " " in {_search} with "+"
+    message "http://minecraft.gamepedia.com/index.php?title=Special:Search&search=%{_search}%" to player
