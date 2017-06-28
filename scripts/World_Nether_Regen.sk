@@ -1,0 +1,10 @@
+every hour:
+  difference between {world_nether.lastreset} and now is greater than 168 hours:
+    broadcast "The Nether will regenerate in one minute!"
+    wait 1 minute
+    set {_seed} to random integer between 0 and 4294967295
+    execute console command "mv regen world_nether -s %{_seed}%"
+    wait 1 second
+    execute console command "mvconfirm"
+    set {world_nether.lastreset} to now
+    broadcast "The Nether has been regenerated."
