@@ -1,0 +1,7 @@
+command /setlastvote <player>:
+  description: Set players last vote as Skript variable.
+  usage: /setlastvote <player>
+  permission: timgaming.skript.setlastvote
+  executable by: console
+  trigger:
+    set {lastvote.%arg 1%} to now
