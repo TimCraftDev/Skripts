@@ -1,0 +1,14 @@
+on join:
+  wait 2 seconds
+  the block at the player's head is not air:
+    the block at the player's head is not water:
+#      the world is "world":
+#        teleport player to location x=207.5, y=89, z=318.5 in world "world"
+#        extinguish player
+#        wait 5 seconds
+#        message "&eALERT: &7You spawned inside a block! You probably just loaded in too slowly. You were teleported to Spawn Town for your safety!" to player
+      the world is not "world":
+        teleport player to location x=207.5, y=89, z=318.5 in world "world"
+        extinguish player
+        wait 5 seconds
+        message "&eALERT: &7You spawned inside a block! You probably just loaded in too slowly, or the map you were in reset. You were teleported to Spawn Town for your safety!" to player
