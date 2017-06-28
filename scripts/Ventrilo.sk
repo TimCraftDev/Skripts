@@ -1,0 +1,13 @@
+command /ventrilo:
+  description: Output Ventrilo VoIP info.
+  permission: timgaming.skript.ventrilo
+  executable by: players
+  aliases: /vent
+  trigger:
+    message "---&aTo join Ventrilo, start by downloading it from &2http://www.ventrilo.com/download.php" to player
+    message "---&aAfter installing it, go to the top left and press &2[->]&a to choose your username." to player
+    message "---&aThen, press &2[->]&a to create a new server. Name it whatever you like, then use this information:" to player
+    message "---&aHostname or IP: &2sodium.typefrag.com" to player
+    message "---&aPort number: &246788" to player
+    message "---&aYou can leave Password and Default Channel blank. Hit OK, and then click Connect on the right side."
+    message "---&aDouble click on a channel name to join that channel. By default, holding &2right Ctrl&a will allow you to talk."
