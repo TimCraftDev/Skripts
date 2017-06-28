@@ -1,0 +1,6 @@
+on damage:
+  world is "world_pvp":
+    attacker has invisibility:
+      victim is a player:
+        remove invisibility from the attacker
+        message "You have become visible!" to attacker
