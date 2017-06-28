@@ -1,0 +1,9 @@
+on damage:
+  world is "world_world001":
+    cancel the event
+  world is "world_world002":
+    cancel the event
+  world is "world_world003":
+    cancel the event
+  world is "world_world004":
+    cancel the event
