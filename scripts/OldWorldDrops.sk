@@ -1,0 +1,18 @@
+on pick up:
+  world is "world_world001":
+    cancel event
+  world is "world_world002":
+    cancel event
+  world is "world_world003":
+    cancel event
+  world is "world_world004":
+    cancel event
+on drop:
+  world is "world_world001":
+    cancel event
+  world is "world_world002":
+    cancel event
+  world is "world_world003":
+    cancel event
+  world is "world_world004":
+    cancel event
