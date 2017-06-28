@@ -1,0 +1,12 @@
+every hour:
+  difference between {world_mining.lastreset} and now is greater than 336 hours:
+    broadcast "The mining world will regenerate in one minute!"
+    wait 1 minute
+    set {_seed} to random integer between 0 and 4294967295
+    execute console command "mv regen world_mining -s %{_seed}%"
+    wait 1 second
+    execute console command "mvconfirm"
+    execute console command "wb world_mining fill"
+    execute console command "wb fill confirm"
+    set {world_mining.lastreset} to now
+    broadcast "The mining world has been regenerated. The portal may not work properly for the next few minutes."
