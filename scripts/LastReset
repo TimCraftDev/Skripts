@@ -1,0 +1,9 @@
+command /lastreset:
+  description: Print list of all important variables to make sure shit works.
+  usage: /lastreset
+  executable by: players and console
+  trigger:
+    message "---- Last known reset Times"
+    message "Mining World: %{world_mining.lastreset}%"
+    message "The Nether: %{world_nether.lastreset}%"
+    message "The End: %{world_the_end.lastreset}%"
