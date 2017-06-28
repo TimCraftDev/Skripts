@@ -1,0 +1,6 @@
+command /mcsk:
+  description: Alias for /mcscoreboard keep.
+  usage: /mcsk
+  executable by: players
+  trigger:
+    make player execute command "/mcscoreboard keep"
