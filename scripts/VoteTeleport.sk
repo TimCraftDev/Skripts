@@ -1,0 +1,21 @@
+command /givevotersteleport <player>:
+  description: Reward voters with /tpa and /tpahere.
+  usage: /givevotersteleport <player>
+  permission: timgaming.skript.vote.teleport
+  executable by: console
+  trigger:
+    difference between {lastvote.%arg 1%} and now is smaller than 24 hours:
+      set {_lastvote} to {lastvote.%arg 1%}
+      add 1 day to {_lastvote}
+      set {_timeleft} to difference between {_lastvote} and now
+      argument does not have permission "essentials.tpa":
+        execute console command "/pex user %arg 1% timed add essentials.tpa 86400"
+      argument does not have permission "essentials.tpahere":
+        execute console command "/pex user %arg 1% timed add essentials.tpahere 86400"
+        wait 5 seconds
+        message "Thank you for voting! You're now able to use &2/tpa&f and &2/tpahere&f for the next &2%{_timeleft}%&f!" to argument
+on join:
+  set {_player} to player
+  difference between {lastvote.%{_player}%} and now is smaller than 24 hours:
+    wait 1 second
+    execute console command "/givevotersteleport %{_player}%"
